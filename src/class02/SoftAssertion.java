@@ -9,12 +9,13 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
+import utils.CommonMethods;
 
 import java.util.concurrent.TimeUnit;
 
-public class SoftAssertion {
+public class SoftAssertion extends CommonMethods {
 
-    WebDriver driver;
+  /*  WebDriver driver;
 
     @BeforeMethod(alwaysRun = true)
     public void openBrowserAndLaunchApplication() {
@@ -23,7 +24,7 @@ public class SoftAssertion {
         driver.manage().window().maximize();
         driver.get("http://hrm.syntaxtechs.net/humanresources/symfony/web/index.php/login");
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-    }
+    }*/
 
     @Test(groups = "regression")
     public void verifyAndValidateSoftAssertions() {
@@ -46,10 +47,10 @@ public class SoftAssertion {
 
     }
 
-    // post condition @AfterMethod -- close browser
+  /*  // post condition @AfterMethod -- close browser
     @AfterMethod(alwaysRun = true)
     public void closeBrowser() {
         driver.quit();
-    }
+    }*/
 
 }

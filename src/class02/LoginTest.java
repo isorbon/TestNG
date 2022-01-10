@@ -6,12 +6,13 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import utils.CommonMethods;
 
 import java.util.concurrent.TimeUnit;
 
-public class LoginTest {
+public class LoginTest extends CommonMethods {
 
-    WebDriver driver;
+  /*  WebDriver driver;
 
     // pre condition @BeforeMethod -- launch browser and navigate url
     @BeforeMethod(alwaysRun = true)
@@ -21,18 +22,18 @@ public class LoginTest {
         driver.get("http://hrm.syntaxtechs.net/humanresources/symfony/web/index.php/login");
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-    }
+    }*/
 
     // @Test -- perform login
     @Test(groups = "regression", enabled = false)
     public void adminLogin() {
         driver.findElement(By.id("txtUsername")).sendKeys("Admin");
-        driver.findElement(By.id("txtPassword")).sendKeys("HRM@nhrm123");
+        driver.findElement(By.id("txtPassword")).sendKeys("Hum@nhrm123");
         driver.findElement(By.id("btnLogin")).click();
     }
 
     @Test(groups = "regression")
-    public void validationOfTest() {
+    public void validationOfTitle() {
         String actualTitle = driver.getTitle();
         String expectedTitle = "Human Management System";
 
@@ -42,11 +43,11 @@ public class LoginTest {
             System.out.println("Test is failed");
         }
     }
-
+/*
     // post condition @AfterMethod -- close browser
     @AfterMethod(alwaysRun = true)
     public void closeBrowser() {
         driver.quit();
-    }
+    }*/
 
 }
