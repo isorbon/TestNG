@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Test Suite for HomeWork">
+    <test verbose="2" preserve-order="true" name="HomeWork Class 03. TestNG">
+        <groups>
+            <run>
+                <include name="addingNewEmployee"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="class03.homework.HW_Employee"/>
+        </classes>
+    </test>
+</suite>
