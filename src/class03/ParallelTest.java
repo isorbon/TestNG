@@ -17,7 +17,7 @@ public class ParallelTest extends CommonMethods {
     @Test(groups = "regression", enabled = true)
     public void adminLogin() {
         driver.findElement(By.id("txtUsername")).sendKeys("Admin");
-        driver.findElement(By.id("txtPassword")).sendKeys("HRM@nhrm123");
+        driver.findElement(By.id("txtPassword")).sendKeys("Hum@nhrm123");
         driver.findElement(By.id("btnLogin")).click();
     }
 
